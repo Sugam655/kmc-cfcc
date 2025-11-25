@@ -1,0 +1,144 @@
+/* HERO SECTION */
+.hero {
+  position: relative;
+  background: linear-gradient(90deg, #2563eb, #1e4fcf);
+  color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* Decorative circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.05;
+}
+
+.top-right {
+  width: 16rem;
+  height: 16rem;
+  top: -8rem;
+  right: -8rem;
+}
+
+.bottom-left {
+  width: 12rem;
+  height: 12rem;
+  bottom: -6rem;
+  left: -6rem;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  max-width: 42rem;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-title .highlight {
+  color: #facc15; /* Yellow */
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.9);
+  animation: slideIn 1s ease-in-out;
+}
+
+/* BUTTON */
+.hero-btn {
+  background-color: white;
+  color: #2563eb;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.btn-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.hero-btn:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+/* FLOATING GIFT ICON */
+.floating-gift {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.gift-icon {
+  color: white;
+  font-size: 2rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .floating-gift {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .floating-gift {
+    display: none;
+  }
+}
